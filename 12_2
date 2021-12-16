@@ -1,0 +1,66 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //подключаем русификацию
+int n;
+    char c;
+    cout << "Введите исходное направление :";
+    cin >> c;
+    cout << "Введите команду:";
+    cin >> n;
+    switch (c+64) {//+64 необходимы для того, чтобы case воспринимал русский символ
+    case 'С'://если направление север
+        switch (n) {
+        case 1: //если действие 1, выводим направление «запад»
+            c = 'З';
+            break; //завершить выполнение кода
+        case 0:
+            c = 'С';
+            break;
+        case -1:
+            c = 'В';
+            break;
+        }
+        break;
+    case 'В': //если направление восток
+        switch (n) {
+        case 1:
+            c = 'С';
+            break;
+        case 0:
+            c = 'В';
+            break;
+        case -1:
+            c = 'Ю';
+            break;
+        }
+    case 'Ю': //если направление юг
+        switch (n) {
+        case 1:
+            c = 'В';
+            break;
+        case 0:
+            c = 'Ю';
+            break;
+        case -1:
+            c = 'З';
+            break;
+        }
+        break;
+    case 'З': //если направление запад
+        switch (n) {
+        case 1:
+            c = 'Ю';
+            break;
+        case 0:
+            c = 'З';
+            break;
+        case -1:
+            c = 'С';
+            break;
+        }
+    }
+    cout << c; 
+}
