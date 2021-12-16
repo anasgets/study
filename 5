@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian");//подключаем русификацию
+int x1, x2, y1, y2, x3, y3, a, b, c, result_p, result_s;
+
+    cout << "Введите x1: ";
+    cin >> x1;
+    cout << "Введите y1: ";
+    cin >> y1;
+    cout << "Введите x2: ";
+    cin >> x2;     
+    cout << "Введите y2: ";
+    cin >> y2;
+    cout << "Введите x3: ";
+    cin >> x3;
+    cout << "Введите y3: ";
+    cin >> y3;
+    a = sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1))); //вычисляем длину стороны треугольника
+    b = sqrt(((x2 - x3) * (x2 - x3)) + ((y2 - y3) * (y2 - y3)));
+    c = sqrt(((x3 - x1) * (x3 - x1)) + ((y3 - y1) * (y3 - y1)));
+    result_p = (a + b + c)/2; //вычисляем периметр
+    result_s = sqrt(result_p * (result_p - a) * (result_p - b) * (result_p - c)); //вычисляем площадь
+    cout << "Периметр: " << result_p << endl << "Площадь: " << result_s;} //выводим результат
