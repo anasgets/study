@@ -1,0 +1,13 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //подключаем русификацию
+int N, resutl;
+    cout << "Секунды:";
+    cin >> N;
+    cout << endl;
+    resutl = N % 60; //высчитываем кол-во секунд
+    cout << "Кол-во секунд, прошедших с начала последней минуты:" << resutl;
+}
