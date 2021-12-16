@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //подключаем русификацию
+int a, b, c, f, e, g;
+    cout << "Введите A:";
+    cin >> a;
+    cout << "Введите B:";
+    cin >> b;
+    cout << "Введите C:";
+    cin >> c;
+    f = a / c; //считаем кол-во квадратов
+    e = b / c;
+    g = a * b - c * c * f * e; //считаем площадь незанятой части
+    cout << "Кол-во квадратов: "<<f * e <<endl<< "Площадь незанятой части: " << g;
+}
