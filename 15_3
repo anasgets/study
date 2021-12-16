@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+float rings(float r1, float r2) { //объявляем функцию
+    return 3.14 * (r1 * r1 - r2 * r2); //возвращаем результат математических действий
+}
+int main(void)
+{
+    int i;
+    for (i = 1; i <= 3; ++i) {
+        float r1, r2;
+        cout<<"R1: ";
+        cin>>r1;
+        cout << "R2:";
+        cin >> r2;
+        cout << "S: "<< rings(r1, r2)<endl; //в вывв\оде вызываем функцию и выводим возвращаемое ей значение
+    }
+    return 0;
+}
