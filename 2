@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian");//подключаем русификацию
+    int a, b, c, ac, bc, result;
+    cout << "Введите A: ";
+    cin >> a;
+    cout << "Введите B: ";
+    cin >> b; 
+    cout << "Введите C: ";
+    cin >> c;
+    ac = abs(a - c); //вычисляем значение длины отрезка
+    bc = abs(b - c); //вычисляем значение длины отрезка
+    result = ac + bc; //вычисляем значение суммы длин отрезков
+    cout << "Длина AC: " << ac << endl << "Длина BC: " << bc << endl << "Сумма AC и BC: " << result;    //выводим результат
+}
