@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //подключаем русификацию
+    int x1, x2, y1, y2; //объявляем переменные
+    float result; //объявляем переменную
+        cout << "Введите х1: ";
+        cin >> x1;
+        cout << "Введите х2: ";
+        cin >> x2;
+        cout << "Введите y1: ";
+        cin >> y1;
+        cout << "Введите y2: ";
+        cin >> y2;
+        result = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2)); //вычисляем значение
+        cout << "Результат: " << result;    //выводим результат
+}
