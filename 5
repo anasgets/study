@@ -1,0 +1,12 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //подключаем русификацию
+int a, b;	
+    cout << "Целое число:";
+    cin >> a;
+    b = (a / 100) + 1; // высчитываем номер столетья
+    cout << b;
+}
