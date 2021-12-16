@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+float fact2(int n) { //объявляем функцию
+    int temp = 1;
+    for (; n > 0; n -= 2) temp *= n; //вычисляем факториал в цикле с шагом 2
+    return temp;
+}
+int main(void)
+{
+    int i, n;
+    for (i = 1; i <= 5; ++i) {
+        cout<<"N:";
+        cin>>n;
+        cout << "fact: "<< fact2(n)<<endl<<endl; // в выводим возвращаемый функцией результат
+    }
+    return 0;
+}
