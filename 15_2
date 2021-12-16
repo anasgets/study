@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std; 
+int sign(float x) { //объявляем функцию
+    if (x < 0) { return -1; }    //проверки значения
+if (x == 0) { return 0; }    
+if (x > 0) { return 1; } 
+}
+int main(void)
+{
+    float a, b;
+    cout<<"A:";
+    cin>>a;
+    cout << "B:";
+    cin >> b;
+    cout << "Sign(A)+Sign(B): " << sign(a) + sign(b); //в выводе вызываем функцию и складываем значения, возвращенные функцией
+    return 0;
+}
