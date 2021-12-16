@@ -1,0 +1,13 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //подключаем русификацию
+int day;
+    cout << "Введите номер дня года: ";
+    cin >> day;
+    while (day > 7)
+        day -= 7; //определяем номер дня недели
+    cout << "Номер дня недели: " << day << endl;
+}
