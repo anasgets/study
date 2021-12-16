@@ -1,0 +1,21 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int quarter(float x, float y) {//объявляем функцию
+    if ((x > 0) && (y > 0)) { return 1; }//проверяем координаты
+    if ((x < 0) && (y > 0)) { return 2; }
+    if ((x < 0) && (y < 0)) { return 3; }     if ((x > 0) && (y < 0)) { return 4; }
+}
+int main(void)
+{
+    int i;
+    for (i = 1; i <= 3; ++i) { // задаем 3 раза координаты для высчитывания
+        float x, y;
+        cout<<"X:";
+        cin>>x;
+        cout << "Y:";
+        cin >> y;
+        cout << "Quarter:"<< quarter(x, y)<<endl; //в выводе вызываем функцию и выводим возвращаемое ей значение
+    }
+    return 0;
+}
