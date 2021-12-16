@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian");//подключаем русификацию
+int x1, x2, y1, y2, a, b, result_p, result_s;
+    cout << "Введите x1: ";
+    cin >> x1;
+    cout << "Введите x2: ";
+    cin >> x2; 
+    cout << "Введите y1: ";
+    cin >> y1;
+    cout << "Введите y2: ";
+    cin >> y2;
+    a = abs(x1 - x2); //вычисляем длину стороны прямоугольника
+    b = abs(y1 -y2); //вычисляем длину стороны прямоугольника
+    result_p = 2 * (a + b); //вычисляем периметр
+    result_s = a * b; //вычисляем площадь
+    cout << "Периметр: " << result_p << endl << "Площадь: " << result_s;} //выводим результат
